@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="53466" started-at="2020-08-04T04:28:16Z" finished-at="2020-08-04T04:29:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="53466" started-at="2020-08-04T04:28:16Z" finished-at="2020-08-04T04:29:09Z">
+      <class name="com.autodeskcrm.orgtest.DeleteOrganization">
+        <test-method status="PASS" signature="deleteOrganization()[pri:0, instance:com.autodeskcrm.orgtest.DeleteOrganization@6574b225]" name="deleteOrganization" duration-ms="53448" started-at="2020-08-04T09:58:16Z" finished-at="2020-08-04T09:59:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteOrganization -->
+      </class> <!-- com.autodeskcrm.orgtest.DeleteOrganization -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
