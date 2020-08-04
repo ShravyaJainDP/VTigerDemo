@@ -1,0 +1,4 @@
+com\autodeshcrm\genericutils\FileUtils.class
+com\autodeshcrm\genericutils\WebUtils.class
+com\autodeshcrm\genericutils\DBUtils.class
+com\autodeshcrm\genericutils\ExcelUtil.class
