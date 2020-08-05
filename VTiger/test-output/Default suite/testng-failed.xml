@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="com.autodeskcrm.orgtest.DeleteOrganization">
+      <class name="com.autodeskcrm.contacttest.DeleteContactWithOrgTest">
         <methods>
-          <include name="deleteOrganization"/>
+          <include name="deleteContactWithOrg"/>
+          <include name="configuringBS"/>
+          <include name="configuringBC"/>
+          <include name="congigureBM"/>
+          <include name="configuringAS"/>
+          <include name="configureAM"/>
         </methods>
-      </class> <!-- com.autodeskcrm.orgtest.DeleteOrganization -->
+      </class> <!-- com.autodeskcrm.contacttest.DeleteContactWithOrgTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

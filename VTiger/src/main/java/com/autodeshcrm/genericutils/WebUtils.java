@@ -56,7 +56,7 @@ import java.util.concurrent.TimeUnit;
 		 */
 		public void expectedTitle(WebDriver driver,String title)
 		{
-			wait=new WebDriverWait(driver,10);
+			wait=new WebDriverWait(driver,20);
 			wait.until(ExpectedConditions.titleContains(title));
 		}
 		

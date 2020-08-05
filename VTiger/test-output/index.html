@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Siddharth\AppData\Local\Temp\testng-eclipse-1070996658\testng-customsuite.xml</span>
+                    <span>C:\Users\Siddharth\AppData\Local\Temp\testng-eclipse--679795538\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.autodeskcrm.orgtest.DeleteOrganization" hash-for-method="deleteOrganization">deleteOrganization</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.autodeskcrm.contacttest.DeleteContactWithOrgTest" hash-for-method="deleteContactWithOrg">deleteContactWithOrg</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.autodeskcrm.orgtest.DeleteOrganization</span>
+              <span class="class-name">com.autodeskcrm.contacttest.DeleteContactWithOrgTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteOrganization">
-                  </a> <!-- deleteOrganization -->
-                  <span class="method-name">deleteOrganization</span>
+                  <a name="deleteContactWithOrg">
+                  </a> <!-- deleteContactWithOrg -->
+                  <span class="method-name">deleteContactWithOrg</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Siddharth\AppData\Local\Temp\testng-eclipse-1070996658\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Siddharth\AppData\Local\Temp\testng-eclipse--679795538\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot; preserve-order=&quot;true&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.autodeskcrm.orgtest.DeleteOrganization&quot;/&gt;
+      &lt;class name=&quot;com.autodeskcrm.contacttest.DeleteContactWithOrgTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,9 +185,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'deleteOrganization')
-data.setCell(0, 2, 'com.autodeskcrm.orgtest.DeleteOrganization')
-data.setCell(0, 3, 53448);
+data.setCell(0, 1, 'deleteContactWithOrg')
+data.setCell(0, 2, 'com.autodeskcrm.contacttest.DeleteContactWithOrgTest')
+data.setCell(0, 3, 53724);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -218,11 +218,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.autodeskcrm.orgtest.DeleteOrganization</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">deleteOrganization</span>
+              <div class="chronological-class-name">com.autodeskcrm.contacttest.DeleteContactWithOrgTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">configuringBS</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">configuringBC</span>
+                <span class="method-start">1613 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">congigureBM</span>
+                <span class="method-start">6936 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">deleteContactWithOrg</span>
+                <span class="method-start">17136 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configureAM</span>
+                <span class="method-start">70862 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">configuringAS</span>
+                <span class="method-start">74980 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

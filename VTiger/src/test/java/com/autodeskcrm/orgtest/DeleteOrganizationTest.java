@@ -9,51 +9,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import com.autodeshcrm.genericutils.BaseCalss;
 import com.autodeshcrm.genericutils.ExcelUtil;
 import com.autodeshcrm.genericutils.FileUtils;
 import com.autodeshcrm.genericutils.WebUtils;
 import com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition.Key;
 
-public class DeleteOrganizationTest {
-static
-{
-	System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
-}
+public class DeleteOrganizationTest extends BaseCalss{
+
 @Test
 public void deleteOrganization() throws Throwable
 {
-	WebUtils web=new WebUtils();
-	ExcelUtil excel=new ExcelUtil();
-	FileUtils file=new FileUtils();
 	
-	/* reading data from property file */
-	
-	String url=file.getPropertyKeyValue("URL");
-	String username=file.getPropertyKeyValue("UN");
-	String pwd=file.getPropertyKeyValue("PWD");
-	String browser=file.getPropertyKeyValue("BROWSER");
-	
-	/* readingdatafrom excel file */
+	/* reading data from excel file */
 	String org_name=excel.readData("org",1,2)+"_"+web.getRandomNumber();
 	String org_Type = excel.readData("org", 1, 3);
 	String org_industry = excel.readData("org", 1, 4);
+	String expectedMsg=excel.readData("org",6,3);
 	
-	WebDriver driver=null;
-	if(browser.equalsIgnoreCase("chrome"))
-	{
-		driver=new ChromeDriver();
-	}
-	/*Step1: Launching the browser */
-	driver.get(url);
-	driver.manage().window().maximize();
-	web.waitPage(driver);
-	
-	/*Step 2: Login */
-	driver.findElement(By.name("user_name")).sendKeys(username);
-	driver.findElement(By.name("user_password")).sendKeys(pwd);
-	driver.findElement(By.id("submitButton")).click();
 	
 	/*Step 3:Navigate to org page */
 	driver.findElement(By.linkText("Organizations")).click();
@@ -77,7 +53,7 @@ public void deleteOrganization() throws Throwable
 
 	Assert.assertTrue(actOrgName.contains(org_name));
 	
-	/*Step 7: Navigate backto organization page */
+	/*Step 7: Navigate back to organization page */
 	driver.findElement(By.linkText("Organizations")).click();
 	
 	/*Step 8: Search the created organization name */
@@ -98,13 +74,10 @@ public void deleteOrganization() throws Throwable
 	/* Step 10: Verifying the delete operation */
 	/* //span[contains(text(),'No Organization Found')] */
 	driver.findElement(By.xpath("//input[@name='search_text']")).sendKeys(org_name);
-	web.selectEleByName(swb3, "Organization Name");
 	driver.findElement(By.xpath("//input[@value=' Search Now ']")).click();
+	String msg=driver.findElement(By.xpath("//span[@class='genHeaderSmall']")).getText();
+	Assert.assertEquals(msg,expectedMsg);
 	
-	/*Step 11: Logou from the application */
-	WebElement lagout = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-	web.mouseHovering(driver, lagout);
-	driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
 	
 	
 }

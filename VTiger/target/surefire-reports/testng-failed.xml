@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)" preserve-order="true">
+    <classes>
+      <class name="com.autodeskcrm.orgtest.CreateOrganizationTest">
+        <methods>
+          <include name="configuringBS"/>
+          <include name="configuringBC"/>
+          <include name="congigureBM"/>
+          <include name="configuringAS"/>
+          <include name="configureAM"/>
+        </methods>
+      </class> <!-- com.autodeskcrm.orgtest.CreateOrganizationTest -->
+      <class name="com.autodeskcrm.contacttest.DeleteContactWithOrgTest">
+        <methods>
+          <include name="deleteContactWithOrg"/>
+          <include name="configuringBC"/>
+          <include name="congigureBM"/>
+          <include name="configureAM"/>
+        </methods>
+      </class> <!-- com.autodeskcrm.contacttest.DeleteContactWithOrgTest -->
+      <class name="com.autodeskcrm.orgtest.DeleteOrganizationTest">
+        <methods>
+          <include name="deleteOrganization"/>
+          <include name="configuringBC"/>
+          <include name="congigureBM"/>
+          <include name="configureAM"/>
+        </methods>
+      </class> <!-- com.autodeskcrm.orgtest.DeleteOrganizationTest -->
+      <class name="com.autodeskcrm.contacttest.CreateContactWtOrgTest">
+        <methods>
+          <include name="configuringBC"/>
+          <include name="createContact"/>
+          <include name="congigureBM"/>
+          <include name="configureAM"/>
+        </methods>
+      </class> <!-- com.autodeskcrm.contacttest.CreateContactWtOrgTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
